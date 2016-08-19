@@ -29,9 +29,9 @@ class BootstrapTour extends \yii\base\Widget
 // Instance the tour
 var tour = new Tour({
   $encodedOptions
-  steps: [
+  steps: 
   $encodedSteps
-]});
+});
 
 // Initialize the tour
 tour.init();
