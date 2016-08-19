@@ -10,13 +10,13 @@ The preferred way to install this extension is through [composer](http://getcomp
 Either run
 
 ```
-php composer.phar require --prefer-dist macrowish/yii2-bootstrap-tour "*"
+php composer.phar require --prefer-dist macrowish/yii2-bootstrap-tour "dev-master"
 ```
 
 or add
 
 ```
-"macrowish/yii2-bootstrap-tour": "*"
+"macrowish/yii2-bootstrap-tour": "dev-master"
 ```
 
 to the require section of your `composer.json` file.
@@ -28,4 +28,12 @@ Usage
 Once the extension is installed, simply use it in your code by  :
 
 ```php
-<?= \macrowish\widgets\AutoloadExample::widget(); ?>```
+<?php \macrowish\widgets\BootstrapTour::widget(['steps'=>[
+    'title'=>'Step 1',
+    'content'=>'Content and stuff',
+    'element'=>'#some-element'
+    ],
+    'options'=>[
+        'backdrop'=>'true'
+        ]
+     ]); ?>```
