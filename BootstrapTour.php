@@ -27,7 +27,7 @@ class BootstrapTour extends \yii\base\Widget
         $view->registerJs(<<<JS
 // Instance the tour
 var tour = new Tour({
-  $encodedOptions;
+  $encodedOptions
   steps: [
   $encodedSteps
 ]});
