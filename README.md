@@ -29,13 +29,13 @@ Once the extension is installed, simply use it in your code by  :
 
 ```php
 <?php 
-$step[0] = [
+$steps[0] = [
     'title'=>'Step 1',
     'content'=>'Content and stuff',
     'element'=>'#some-element'
 ];
 
-// $step[1] = ... etc
+// $steps[1] = ... etc
 
 \macrowish\widgets\BootstrapTour::widget([
     'steps'=>$steps,
