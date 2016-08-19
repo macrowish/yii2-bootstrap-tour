@@ -28,12 +28,19 @@ Usage
 Once the extension is installed, simply use it in your code by  :
 
 ```php
-<?php \macrowish\widgets\BootstrapTour::widget(['steps'=>[
+<?php 
+$steps[0] = [
     'title'=>'Step 1',
     'content'=>'Content and stuff',
     'element'=>'#some-element'
-    ],
+];
+
+// $steps[1] = ... etc
+
+\macrowish\widgets\BootstrapTour::widget([
+    'steps'=>$steps,
     'options'=>[
         'backdrop'=>'true'
         ]
-     ]); ?>```
+     ]); ?>
+```
