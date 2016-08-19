@@ -18,7 +18,11 @@ class BootstrapTour extends \yii\base\Widget
         $view->registerJsFile('//cdnjs.cloudflare.com/ajax/libs/bootstrap-tour/0.11.0/js/bootstrap-tour.min.js', ['depends' => [\yii\bootstrap\BootstrapPluginAsset::className()]]);
 
         $encodedSteps = json_encode($this->steps);
-        $encodedOptions = json_encode($this->options);
+        if(!empty($this->options)) {
+            $encodedOptions = json_encode($this->options);
+        }else{
+            $encodedOptions = '';
+        }
 
         $view->registerJs(<<<JS
 // Instance the tour
